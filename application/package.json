@@ -1,0 +1,20 @@
+{
+     "name": "electron-typescript-webpack-frontend-boilerplate-application",
+     "version": "0.0.0",
+     "license": "MIT",
+     "main": "dist/main/main.js",
+     "scripts": {
+          "start": "electron-webpack dev",
+          "compile": "electron-webpack"
+     },
+     "dependencies": {
+          "source-map-support": "^0.5.10"
+     },
+     "devDependencies": {
+          "electron": "4.0.1",
+          "electron-builder": "20.38.4",
+          "electron-webpack": "^2.6.2",
+          "typescript": "^3.4.5",
+          "webpack": "4.28.4"
+     }
+}
