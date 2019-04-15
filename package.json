@@ -12,7 +12,21 @@
           "url": "git://github.com/SatarisGIT/electron-typescript-webpack-frontend-boilerplate.git"
      },
      "scripts": {
-          "clean": "rimraf ./builded"
+          "clean": "rimraf ./builded",
+          "install-all": "npm i && npm run install-application && npm run install-frontend",
+          "install-application": "cd ./application && npm i",
+          "install-frontend": "cd ./frontend && npm i",
+          "prefrontend:build": "rimraf ./application/static",
+          "frontend:build": "npm run build --prefix ./frontend",
+          "postfrontend:build": "move ./frontend/build ./application/static",
+          "frontend:start": "npm run start --prefix ./frontend",
+          "application:start": "npm run start --prefix ./application",
+          "start": "start npm run frontend:start && npm run application:start",
+          "application:build:rpi": "npm run build:rpi --prefix ./application",
+          "application:build:win32": "npm run build:win32 --prefix ./application",
+          "application:build:win64": "npm run build:win64 --prefix ./application",
+          "application:build:linux32": "npm run build:linux32 --prefix ./application",
+          "application:build:linux64": "npm run build:linux64 --prefix ./application"
      },
      "devDependencies": {
           "rimraf": "^2.6.3"
