@@ -1,6 +1,12 @@
 {
-     "extends": "./node_modules/electron-webpack/tsconfig-base.json",
-     "compilerOptions": {
-          "noImplicitAny": false
-     }
+  "extends": "./node_modules/electron-webpack/tsconfig-base.json",
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true
+  }
 }

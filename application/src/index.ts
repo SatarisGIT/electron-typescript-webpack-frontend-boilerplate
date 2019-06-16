@@ -3,12 +3,15 @@ import * as path from 'path';
 import { format as formatUrl } from 'url';
 
 const isDev = process.env.NODE_ENV === 'development';
-declare var __static: string;
+
 
 console.log(`isDev env? : ${isDev}`);
 
+
+declare var __static: any;
+
 // global reference to mainWindow (necessary to prevent window from being garbage collected)
-let mainWindow: BrowserWindow | null;
+let mainWindow: any;
 
 function createMainWindow() {
 

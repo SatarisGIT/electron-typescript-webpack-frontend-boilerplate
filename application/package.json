@@ -7,6 +7,7 @@
           "prestart": "rimraf ./dist",
           "start": "electron-webpack dev",
           "compile": "electron-webpack",
+          "webpack": "webpack",
           "prebuild": "npm run compile",
           "build": "electron-packager . application --appname=Application --overwrite --icon=./favicon.ico --out=../builded --asar.unpackDir='static' --ignore=\"(README.md)\"    ",
           "build:rpi": "npm run build -- --platform=linux --arch=armv7l",
@@ -16,6 +17,7 @@
           "build:linux64": "npm run build -- --platform=linux --arch=x64"
      },
      "dependencies": {
+          "fs": "0.0.1-security",
           "source-map-support": "^0.5.10"
      },
      "devDependencies": {
@@ -24,7 +26,8 @@
           "electron-webpack": "^2.6.2",
           "electron-webpack-ts": "^3.1.1",
           "rimraf": "^2.6.3",
-          "typescript": "^3.4.5",
-          "webpack": "4.28.4"
+          "ts-loader": "^6.0.2",
+          "typescript": "^3.5.2",
+          "webpack": "^4.28.4"
      }
 }
